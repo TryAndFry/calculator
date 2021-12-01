@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate!</title>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/segment14" type="text/css"/>
+</head>
+<body>
+    <div class="calc-frame">
+        <div class="screen">
+            <div class="entry">
+            </div>
+            <div class="result">0
+            </div>
+        </div>
+        <div class='buttons'>
+            <div class='row clear'>
+                <div class='button' data='clear-entry'>CE
+                </div>
+                <div class='button' data='clear'>C
+                </div>
+                <div class='button' data='sign' style="background-color: rgb(247, 80, 130);">±
+                </div>
+            </div>
+            <div class='row'>
+                <div class='button' data='7'>7
+                </div>
+                <div class='button' data='8'>8
+                </div>
+                <div class='button' data='9'>9
+                </div>
+                <div class='button' data='divide'>/
+                </div>
+            </div>
+            <div class='row'>
+                <div class='button' data='4'>4
+                </div>
+                <div class='button' data='5'>5
+                </div>
+                <div class='button' data='6'>6
+                </div>
+                <div class='button' data='multiply'>x
+                </div>
+            </div>
+            <div class='row'>
+                <div class='button' data='1'>1
+                </div>
+                <div class='button' data='2'>2
+                </div>
+                <div class='button' data='3'>3
+                </div>
+                <div class='button' data='subtract'>-
+                </div>
+            </div>
+            <div class='row'>
+                <div class='button' data=','>.
+                </div>
+                <div class='button' data='0'>0
+                </div>
+                <div class='button' data='='>=
+                </div>
+                <div class='button' data='add'>+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js" defer></script>
+</html>
+<style>
+    html{
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        height: 100%;
+    }
+
+    body{
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .entry{
+        flex:1;
+        width: 100%;
+        text-align: end;
+        font-family: 'Segment14Regular', monospace;
+        font-size: 1.5rem;;
+    }
+
+    .result{
+        flex:2;
+        font-size: 4rem;
+        width: 100%;
+        text-align: end;
+        font-family: 'Segment14Regular', monospace;
+    }
+    
+    .calc-frame{
+        min-height: 535px;
+        min-width: 440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        min-width: 25%;
+        background-color: silver;
+        border-radius: 5px;
+        border: solid thin black;
+    }
+
+    .screen{
+        width: 90%;
+        height: 75%;
+        background-color: rgb(179, 245, 173);
+        margin: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: solid medium black;
+    }
+    .buttons{
+        width: 90%;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        row-gap: 1rem;;
+    }
+
+    .row{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .button{
+        width: 12%;
+        text-align: center;
+        border: solid medium black;
+        padding: 1rem;
+        background-color: beige;
+        font-weight: 500;
+    }
+
+    .clear > .button{
+        width: 37%;
+        text-align: center;
+        border: solid medium black;
+        background-color: rgb(255, 60, 60);
+        font-weight: 500;
+    }
+
+    .button:hover{
+        opacity:50%;
+        cursor: pointer;
+    }
+    
+    .clear > .button:hover{
+        background-color: rgb(99, 14, 14);
+        cursor:pointer;
+    }
+
+</style>
